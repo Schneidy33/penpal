@@ -1,0 +1,25 @@
+<h1>Message #<%= @message.id %></h1>
+
+<div>
+  <strong>Body</strong>:<br />
+  <p><%= @message.body %></p>
+</div>
+<div>
+  <strong>Reciever</strong>:<br />
+  <p><%= @message.reciever.name %></p>
+</div>
+<div>
+  <strong>Sender</strong>:<br />
+  <p><%= @message.sender.name %></p>
+</div>
+<div>
+  <strong>Subject</strong>:<br />
+  <p><%= @message.subject %></p>
+</div>
+<div>
+  <strong>Image url</strong>:<br />
+  <p><%= @message.image_url %></p>
+</div>
+
+<a href="/messages/<%= @message.id %>/edit">Edit</a> |
+<a href="/messages/<%= @message.id %>/destroy">Destroy</a>

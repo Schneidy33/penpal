@@ -1,0 +1,25 @@
+<h1>School #<%= @school.id %></h1>
+
+<div>
+  <strong>City</strong>:<br />
+  <p><%= @school.city %></p>
+</div>
+<div>
+  <strong>Neighborhood</strong>:<br />
+  <p><%= @school.neighborhood %></p>
+</div>
+<div>
+  <strong>State</strong>:<br />
+  <p><%= @school.state %></p>
+</div>
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @school.name %></p>
+</div>
+<div>
+  <strong>Description</strong>:<br />
+  <p><%= @school.description %></p>
+</div>
+
+<a href="/schools/<%= @school.id %>/edit">Edit</a> |
+<a href="/schools/<%= @school.id %>/destroy">Destroy</a>

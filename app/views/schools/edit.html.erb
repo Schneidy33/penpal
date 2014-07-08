@@ -1,0 +1,29 @@
+<h1>Editing School #<%= @school.id %></h1>
+
+<form action="/schools/<%= @school.id %>/update">
+  <div>
+    <label for="city">city</label><br />
+    <input id="city" name="city" value="<%= @school.city  %>" type="text" />
+  </div>
+  <div>
+    <label for="neighborhood">neighborhood</label><br />
+    <input id="neighborhood" name="neighborhood" value="<%= @school.neighborhood  %>" type="text" />
+  </div>
+  <div>
+    <label for="state">state</label><br />
+    <input id="state" name="state" value="<%= @school.state  %>" type="text" />
+  </div>
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @school.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="description">description</label><br />
+    <input id="description" name="description" value="<%= @school.description  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

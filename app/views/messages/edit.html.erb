@@ -1,0 +1,29 @@
+<h1>Editing Message #<%= @message.id %></h1>
+
+<form action="/messages/<%= @message.id %>/update">
+  <div>
+    <label for="body">body</label><br />
+    <input id="body" name="body" value="<%= @message.body  %>" type="text" />
+  </div>
+  <div>
+    <label for="reciever_id">reciever_id</label><br />
+    <input id="reciever_id" name="reciever_id" value="<%= @message.reciever_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="sender_id">sender_id</label><br />
+    <input id="sender_id" name="sender_id" value="<%= @message.sender_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="subject">subject</label><br />
+    <input id="subject" name="subject" value="<%= @message.subject  %>" type="text" />
+  </div>
+  <div>
+    <label for="image_url">image_url</label><br />
+    <input id="image_url" name="image_url" value="<%= @message.image_url  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

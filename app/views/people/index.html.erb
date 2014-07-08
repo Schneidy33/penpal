@@ -1,0 +1,39 @@
+<h1>People</h1>
+
+<p><a href="/new_person">Add a New Person</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Occupation</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Gradelevel</th>
+      <th>Image</th>
+      <th>School</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @people.each do |person| %>
+    <tr>
+          <td><%= person.name %></td>
+          <td><%= person.occupation %></td>
+          <td><%= person.email %></td>
+          <td><%= person.phone %></td>
+          <td><%= person.gradelevel %></td>
+          <td><%= person.image %></td>
+          <td><%= person.school_id %></td>
+          <td><a href="/people/<%= person.id %>">Show</a>
+        </td>
+      <td><a href="/people/<%= person.id %>/edit">Edit</a></td>
+      <td><a href="/people/<%= person.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

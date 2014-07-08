@@ -1,0 +1,29 @@
+<h1>Messages</h1>
+
+<p><a href="/new_message">Add a New Message</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Image url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @messages.each do |message| %>
+    <tr>
+          <td><%= message.subject %></td>
+          <td><%= message.image_url %></td>
+          <td><a href="/messages/<%= message.id %>">Show</a>
+        </td>
+      <td><a href="/messages/<%= message.id %>/edit">Edit</a></td>
+      <td><a href="/messages/<%= message.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

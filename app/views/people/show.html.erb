@@ -1,0 +1,33 @@
+<h1>Person #<%= @person.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @person.name %></p>
+</div>
+<div>
+  <strong>Occupation</strong>:<br />
+  <p><%= @person.occupation %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @person.email %></p>
+</div>
+<div>
+  <strong>Phone</strong>:<br />
+  <p><%= @person.phone %></p>
+</div>
+<div>
+  <strong>Gradelevel</strong>:<br />
+  <p><%= @person.gradelevel %></p>
+</div>
+<div>
+  <strong>Image</strong>:<br />
+  <p><%= @person.image %></p>
+</div>
+<div>
+  <strong>School</strong>:<br />
+  <p><%= @person.school_id %></p>
+</div>
+
+<a href="/people/<%= @person.id %>/edit">Edit</a> |
+<a href="/people/<%= @person.id %>/destroy">Destroy</a>
