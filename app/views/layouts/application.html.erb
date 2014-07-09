@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <script src="http://code.jquery.com/jquery.min.js"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -10,18 +11,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div>
+    <% if session[:person_id]%>
+    You're signed in,<%=session[:person_id]%>
+    <a href= "/sessions/destroy">Sign out</a>
+    <%else%>
+    <a href= "/sessions/new">Sign In</a>
+    <%end%>
+    </div>
+  <p>
+    <h1 style="text-align:center;"></h1>
 <ul class="nav nav-pills">
-  <li class="active"><a href="#">Home</a></li>
+  <li class="active"><a href="/">Home</a></li>
   <li><a href="/teachers">Teachers</a></li>
   <li><a href="/students">Students</a></li>
    <li><a href="/messages">Discussion Board</a></li>
+  <li><a href="/teachers">Sign up!</a></li>
 </ul>
+     <h4> Already know what your looking for? </h4>
+<form class="navbar-form navbar-left" action= "/schools" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control"  placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
   
+  </p>
 <div class="jumbotron">
   <h1><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTsMhWMh6CfAVCBIYnaBXs07Q5asmcOlQBLuyiscxQcfiRdsYhG"></h1>
   <p>...teachers need a safe place to find pen pals from your local community or anywhere in the country...</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  <p><a class="btn btn-primary btn-lg" role="button" href= "/learn">Learn more</a></p>
 </div>
+  
+ 
+
+  
 <%= yield %>
 
 </body>

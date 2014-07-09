@@ -17,6 +17,45 @@
   </thead>
 
   <tbody>
+    
+       <div class="resources"> <h3>Student Resources</h3><ul class="nav nav-pills nav-stacked">
+  <li class="active">
+    <a href="http://www.ixl.com/">
+      <span class="badge pull-right">42</span>
+      IXL
+    </a>
+  </li>
+    <li>
+    <a href="http://www.brainpop.com/">
+      <span class="badge pull-right">42</span>
+      Brainpop
+    </a>
+  </li>
+    <li>
+    <a href="http://www.scholastic.com/home/">
+      <span class="badge pull-right">42</span>
+     Scholastic
+    </a>
+  </li>
+    <li>
+    <a href="http://www.funbrain.com/">
+      <span class="badge pull-right">42</span>
+      Fun brain
+    </a>
+  </li>
+    <li>
+    <a href="http://interactivesites.weebly.com/">
+      <span class="badge pull-right">42</span>
+      Interactive sites
+    </a>
+  </li>
+    <li>
+    <a href="http://www.discoveryeducation.com/">
+      <span class="badge pull-right">42</span>
+      Discovery
+    </a>
+  </li>
+    </div>
   <% @people.each do |person| %>
     <tr>
           <td><%= person.name %></td>
@@ -29,6 +68,8 @@
       <td><a href="/people/<%= person.id %>/edit">Edit</a></td>
       <td><a href="/people/<%= person.id %>/destroy">Destroy</a></td>
     </tr>
+    
+ 
   <% end %>
   </tbody>
 </table>

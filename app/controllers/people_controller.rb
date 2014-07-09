@@ -5,9 +5,13 @@ class PeopleController < ApplicationController
   end
 
   def show
+    if session[:user_id] !=params[:id].to_i
+      redirect_to "/sessions/new"
+      
     @person = Person.find_by(id: params[:id])
   end
-
+  end
+  
   def new
   end
 
@@ -20,6 +24,8 @@ class PeopleController < ApplicationController
     @person.gradelevel = params[:gradelevel]
     @person.image = params[:image]
     @person.school_id = params[:school_id]
+    @person.password = params[:password]
+    @person.password_confirmation = params[:password_confirmation]
 
     if @person.save
       redirect_to "/people/#{ @person.id }"
@@ -41,6 +47,8 @@ class PeopleController < ApplicationController
     @person.gradelevel = params[:gradelevel]
     @person.image = params[:image]
     @person.school_id = params[:school_id]
+    @person.password = params[:password]
+    @person.password_confirmation = params[:password_confirmation]
 
     if @person.save
       redirect_to "/people/#{ @person.id }"

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  #Routes for sign in
+  get '/sessions/new' => 'sessions#new'
+  get '/sessions/create' => 'sessions#create'
+  get '/sessions/destroy' => 'sessions#destroy'
+  
+  get '/' => "special#home"
+  get '/learn' => 'special#learn'
   # Routes for the Message resource:
   # CREATE
   get '/new_message' => 'messages#new'

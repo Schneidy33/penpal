@@ -14,10 +14,18 @@
  *= require_self
  */
 body{
-	width:500px;
+	width:600px;
 	margin:0px auto;
 	text-align:left;
 	padding:15px;
 	border:1px dashed #333;
 	background-color:#E0FFFF;
 	}
+
+.resources
+{  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.indie{ font-family:indie flower;}

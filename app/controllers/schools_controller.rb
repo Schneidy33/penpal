@@ -1,7 +1,15 @@
 class SchoolsController < ApplicationController
 
   def index
+    search = params['search']
+    
+    if search
+      schools_by_location= School.where(location: search)
+      schools_by_name= School.where(name: search)
+      @schools= schools_by_location + schools_by_name
+    else
     @schools = School.all
+    end
   end
 
   def show
